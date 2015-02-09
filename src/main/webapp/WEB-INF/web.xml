@@ -6,19 +6,22 @@
   <display-name>V2IAC1-14 sample application</display-name>
 
     <servlet>
-        <servlet-name>jersey-sample-servlet</servlet-name>
-        <servlet-class>
-            com.sun.jersey.spi.container.servlet.ServletContainer
-        </servlet-class>
+        <servlet-name>V2IAC1-14 Web Application</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
-            <param-name>com.sun.jersey.config.property.packages</param-name>
-            <param-value>nl.hu.v2iac1</param-value>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>nl.hu.v2iac1.SampleApplication</param-value>
+        </init-param>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>nl.hu.v2iac1.rest.resource</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+
     <servlet-mapping>
-        <servlet-name>jersey-sample-servlet</servlet-name>
+        <servlet-name>V2IAC1-14 Web Application</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
 </web-app>
