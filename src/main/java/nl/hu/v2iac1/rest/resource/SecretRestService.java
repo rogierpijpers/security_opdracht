@@ -4,9 +4,12 @@ import nl.hu.v2iac1.Configuration;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/secret")
+@Produces(MediaType.TEXT_PLAIN)
 public class SecretRestService extends AbstractRestService{
 
 
