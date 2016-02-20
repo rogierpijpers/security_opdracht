@@ -2,7 +2,8 @@ package nl.hu.v2iac1.rest.resource;
 
 import nl.hu.v2iac1.Configuration;
 
-
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -31,23 +32,18 @@ public class VerySecretRestService extends AbstractRestService {
 
     }
     @GET
-    @Path("/oauth2callback")
-    public Response callBack(){
-    	
-		return null;
+    @Path("/redirect")
+    public Response redirect() throws URISyntaxException{
+    	URI uri = new URI("https://accounts.google.com/o/oauth2/v2/auth?client_id=670282150821-0kd0pjsm09re6mtvjdm5s9ejek3hc4a0.apps.googleusercontent.com&response_type=code&scope=openid%20email&state=http://localhost:8080/rest/verysecret&acces_type=offline&redirect_uri=http%3A%2F%2Flocalhost:8080%2Frest%2Fverysecret");
+		return Response.temporaryRedirect(uri).build();
     	
     }
     
 
     
     /*
-     https://accounts.google.com/o/oauth2/v2/auth?
-     client_id=670282150821-0kd0pjsm09re6mtvjdm5s9ejek3hc4a0.apps.googleusercontent.com
-     &response_type=code
-     &scope=openid%20email
-     &state=http://localhost:8080/rest/verysecret
-     &acces_type=offline
-     &redirect_uri=http%3A%2F%2Flocalhost:8080%2Frest%2Fverysecret
+     https://accounts.google.com/o/oauth2/v2/auth?client_id=670282150821-0kd0pjsm09re6mtvjdm5s9ejek3hc4a0.apps.googleusercontent.com&response_type=code&scope=openid%20email&state=http://localhost:8080/rest/verysecret&acces_type=offline&redirect_uri=http%3A%2F%2Flocalhost:8080%2Frest%2Fverysecret    	 
     	 
+    code=4/EDxem0UwFLAT2xY8eMeO9nmNO9z-f6rD7zlkxAj5g3o
     	 */
 }
