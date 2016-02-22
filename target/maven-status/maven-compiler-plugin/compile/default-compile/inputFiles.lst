@@ -1,7 +1,7 @@
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\SampleApplication.java
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\SecretRestService.java
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\AbstractRestService.java
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\Configuration.java
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\PublicRestService.java
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\TopSecretRestService.java
-C:\Users\maxca\git\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\VerySecretRestService.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\AbstractRestService.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\PublicRestService.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\Configuration.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\VerySecretRestService.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\SampleApplication.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\SecretRestService.java
+D:\Dropbox\HU\C. Integration Communication\Security\Workspace\security_opdracht\src\main\java\nl\hu\v2iac1\rest\resource\TopSecretRestService.java
