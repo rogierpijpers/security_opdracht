@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class UserService {
 	private ArrayList<User> users;
 	
-	private UserService(){
+	public UserService(){
 		users = new ArrayList<User>();
 		String salt1 = HashDigest.getSalt();
 		users.add(new User("gebruiker", HashDigest.hash("wachtwoord1", salt1), salt1, "rogierpijpers1992@gmail.com"));
 	}
+	
 	
 	public boolean authenticate(String username, String password){
 		try{
