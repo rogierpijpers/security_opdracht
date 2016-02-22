@@ -4,10 +4,11 @@
 <form>
  
 </form>
-<form action="rest/topsecret/{token}">
+<form action="rest/topsecret/authorized" method="POST">
      Vul hier de code in die is gestuurd via de mail:<br>
-  <input type="number" name="token"><br>
+  <input type="text" name="token"><br>
   <input type="submit" value="bevestig code">
 </form>
+
 </body>
 </html>
