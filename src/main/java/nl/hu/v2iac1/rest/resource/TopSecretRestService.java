@@ -75,6 +75,6 @@ public class TopSecretRestService extends AbstractRestService {
 		}
 		return Response.temporaryRedirect(uri).build();
 
-	}
+	}//hallo
 
 }
