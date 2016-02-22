@@ -1,8 +1,11 @@
 package nl.hu.v2iac1.rest.resource;
 
 import nl.hu.v2iac1.Configuration;
+
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -12,30 +15,35 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
+import auth.TokenGen;
+
 @Path("/verysecret")
 @Produces(MediaType.TEXT_PLAIN)
 public class VerySecretRestService extends AbstractRestService {
 
-	String clientID = "670282150821-0kd0pjsm09re6mtvjdm5s9ejek3hc4a0.apps.googleusercontent.com";
-	String clientsecret = "wEWpecZ0wi2Npw44WS8xceof";
+	private String clientID = "670282150821-0kd0pjsm09re6mtvjdm5s9ejek3hc4a0.apps.googleusercontent.com";
+	private String clientsecret = "wEWpecZ0wi2Npw44WS8xceof";
+	
 
 	@GET
 	@Path("/{token}")
 	public Response getSecret(@PathParam("token") String token) throws URISyntaxException {
 
-		URI uri = new URI("http://localhost:8080/rest/verysecret/authenticate");
-
-		if (!token.equals(clientsecret)) {
-
+		URI uri = new URI("http://localhost:8080/rest/verysecret/");
+		
+		TokenGen gen = TokenGen.getInstance();
+		
+		if (!gen.cashToken(token)) {		
 			return Response.temporaryRedirect(uri).build();
 		}
+		
 		String output = "This is very secret: " + configuration.getValue(Configuration.Key.VERYSECRET);
 		return Response.status(200).entity(output).build();
 
 	}
 
 	@GET
-	@Path("/authenticate")
+	@Path("/")
 	@Produces("text/html")
 	public Response authenticate() {
 		URI uri = null;
@@ -65,8 +73,12 @@ public class VerySecretRestService extends AbstractRestService {
 
 			return Response.temporaryRedirect(uri).build();
 		}
+		TokenGen gen = TokenGen.getInstance();
+		String token = gen.generateToken();
 
-		uri = new URI("http://localhost:8080/rest/verysecret/" + clientsecret);
+		System.out.println("Generated: "+token);
+		
+		uri = new URI("http://localhost:8080/rest/verysecret/" + token);
 		return Response.temporaryRedirect(uri).build();
 	}
 
