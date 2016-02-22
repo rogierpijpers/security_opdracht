@@ -36,8 +36,8 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
-			<!--  Spring security  -->
+
+		<!-- Spring security -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -49,11 +49,11 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 			<exclusions>
-			   <exclusion>
-			      <groupId>commons-logging</groupId>
-			      <artifactId>commons-logging</artifactId>
-			   </exclusion>
-			</exclusions>			
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -84,39 +84,51 @@
 			<artifactId>spring-security-core</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
-		
-<dependency>
-     <groupId>com.google.api-client</groupId>
-     <artifactId>google-api-client</artifactId>
-     <version>1.19.1</version>
-   </dependency>
-<dependency>
-  <groupId>com.google.oauth-client</groupId>
-  <artifactId>google-oauth-client</artifactId>
-  <version>1.20.0</version>
-</dependency>
-<dependency>
-  <groupId>com.google.oauth-client</groupId>
-  <artifactId>google-oauth-client-servlet</artifactId>
-  <version>1.20.0</version>
-</dependency>
-<dependency>
-  <groupId>com.google.oauth-client</groupId>
-  <artifactId>google-oauth-client-jetty</artifactId>
-  <version>1.20.0</version>
-</dependency>
-    
-    
+
+		<!-- Goole API -->
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client</artifactId>
+			<version>1.19.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client</artifactId>
+			<version>1.20.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client-servlet</artifactId>
+			<version>1.20.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client-jetty</artifactId>
+			<version>1.20.0</version>
+		</dependency>
+
+		<!-- Java Mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

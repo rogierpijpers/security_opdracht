@@ -20,6 +20,7 @@ import auth.TokenGen;
 @Path("/verysecret")
 @Produces(MediaType.TEXT_PLAIN)
 public class VerySecretRestService extends AbstractRestService {
+	
 
 	private String clientID = "670282150821-0kd0pjsm09re6mtvjdm5s9ejek3hc4a0.apps.googleusercontent.com";
 	private String clientsecret = "wEWpecZ0wi2Npw44WS8xceof";
@@ -79,5 +80,6 @@ public class VerySecretRestService extends AbstractRestService {
 		uri = new URI("http://localhost:8080/rest/verysecret/" + token);
 		return Response.temporaryRedirect(uri).build();
 	}
+	
 
 }
