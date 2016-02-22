@@ -39,7 +39,6 @@ public class TokenGen {
 	    for (int i = 0; i < 20; i++) {
 	        token += alphabet.charAt(r.nextInt(N));
 	    }
-	    System.out.println(token);
 	    
 	    oneTimeTokens.add(token);
 		return token;

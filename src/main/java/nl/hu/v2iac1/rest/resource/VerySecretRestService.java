@@ -75,8 +75,6 @@ public class VerySecretRestService extends AbstractRestService {
 		}
 		TokenGen gen = TokenGen.getInstance();
 		String token = gen.generateToken();
-
-		System.out.println("Generated: "+token);
 		
 		uri = new URI("http://localhost:8080/rest/verysecret/" + token);
 		return Response.temporaryRedirect(uri).build();
